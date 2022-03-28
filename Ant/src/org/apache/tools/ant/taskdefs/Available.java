@@ -436,6 +436,8 @@ public class Available extends Task implements Condition {
     /**
      * Check if a given class can be loaded.
      */
+
+    //[FIXME: Remove the condition that checks if loader is null or not, as loader behaviour is already handled by createClassLoader() method. ]
     private boolean checkClass(String classname) {
         try {
             if (ignoreSystemclasses) {
