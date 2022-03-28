@@ -302,6 +302,7 @@ public class PathConvert extends Task {
     /**
      * Set the preserveDuplicates.
      * @param preserveDuplicates the boolean to set
+     * @param preserveDuplicates the boolean to set
      * @since Ant 1.8
      */
     public void setPreserveDuplicates(boolean preserveDuplicates) {
@@ -412,6 +413,8 @@ public class PathConvert extends Task {
      * @param elem The path element to apply the map to.
      * @return String Updated element.
      */
+
+    //[FIXME: Compare string using equals() method instead of != operator]
     private String mapElement(String elem) {
 
         int size = prefixMap.size();
