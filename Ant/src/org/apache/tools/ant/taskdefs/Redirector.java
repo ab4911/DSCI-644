@@ -893,6 +893,8 @@ public class Redirector {
      *             if the output properties cannot be read from their output
      *             streams.
      */
+
+    //[FIXME: Remove the block and add if condition to check null in 4th Synchronize lock inside for loop.]
     public void complete() throws IOException {
         System.out.flush();
         System.err.flush();
