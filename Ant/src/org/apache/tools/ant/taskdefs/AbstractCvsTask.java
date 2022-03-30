@@ -449,6 +449,8 @@ public abstract class AbstractCvsTask extends Task {
      * @param cmdLine the CVS command line
      * @return a StringBuffer where the password has been removed (if available)
      */
+
+    //[FIXME: String.indexOf(char) is faster than String.indexOf(String).]
     private StringBuffer removeCvsPassword(String cmdLine) {
         StringBuffer stringBuffer = new StringBuffer(cmdLine);
 
