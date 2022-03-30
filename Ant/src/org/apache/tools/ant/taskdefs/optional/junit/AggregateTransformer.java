@@ -221,6 +221,8 @@ public class AggregateTransformer {
      * transformation
      * @throws BuildException exception if something goes wrong with the transformation.
      */
+
+    //[FIXME: No need to call String.valueOf to append to a string.]
     public void transform() throws BuildException {
         checkOptions();
         Project project = task.getProject();
