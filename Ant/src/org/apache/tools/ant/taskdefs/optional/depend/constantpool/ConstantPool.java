@@ -89,6 +89,8 @@ public class ConstantPool {
      * @return the index into the constant pool at which the entry is
      *      stored.
      */
+
+    //[FIXME: Avoid instantiating Integer objects. Call Integer.valueOf() instead.]
     public int addEntry(ConstantPoolEntry entry) {
         int index = entries.size();
 
