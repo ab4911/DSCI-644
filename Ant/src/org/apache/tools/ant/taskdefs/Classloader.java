@@ -159,6 +159,8 @@ public class Classloader extends Task {
     /**
      * do the classloader manipulation.
      */
+
+    //[TODO: Remove empty if loops]
     public void execute() {
         try {
             // Gump friendly - don't mess with the core loader if only classpath
