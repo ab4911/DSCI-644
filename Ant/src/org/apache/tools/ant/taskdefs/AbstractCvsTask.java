@@ -478,14 +478,12 @@ public abstract class AbstractCvsTask extends Task {
      *            the CVSROOT variable
      */
 
-    //[TODO: These nested if statements could be combined]
     public void setCvsRoot(String root) {
 
         // Check if not real cvsroot => set it to null
-        if (root != null) {
-            if (root.trim().equals("")) {
+        if (root != null && root.trim().equals("")) {
                 root = null;
-            }
+
         }
 
         this.cvsRoot = root;
