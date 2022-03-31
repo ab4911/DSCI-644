@@ -431,7 +431,7 @@ public class PathConvert extends Task {
                 // Note I'm using "!=" to see if we got a new object back from
                 // the apply method.
 
-                if (newElem != elem) {
+                if (newElem.equals(elem)) {
                     elem = newElem;
                     break; // We applied one, so we're done
                 }
