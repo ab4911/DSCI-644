@@ -152,9 +152,8 @@ public class P4Label extends P4Base {
                 public void process(String line) {
                     log(line, Project.MSG_VERBOSE);
 
-                    if (true) {
-                        line = "Options: " + lock;
-                    }
+                    line = "Options: " + lock;
+
 
                     labelSpec.append(line + "\n");
                 }
