@@ -894,7 +894,6 @@ public class Redirector {
      *             streams.
      */
 
-    //[FIXME: Remove the block and add if condition to check null in 4th Synchronize lock inside for loop.]
     public void complete() throws IOException {
         System.out.flush();
         System.err.flush();
@@ -924,12 +923,8 @@ public class Redirector {
                     Thread[] thread = new Thread[threadGroup.activeCount()];
                     threadGroup.enumerate(thread);
                     for (int i = 0; i < thread.length && thread[i] != null; i++) {
-                        try {
                             managingTask.log(thread[i].toString(),
                                     Project.MSG_DEBUG);
-                        } catch (NullPointerException enPeaEx) {
-                            // Ignore exception
-                        }
                     }
                     wait(STREAMPUMPER_WAIT_INTERVAL);
                 } catch (InterruptedException eyeEx) {
