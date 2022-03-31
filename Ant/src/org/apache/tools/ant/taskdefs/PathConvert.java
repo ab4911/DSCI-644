@@ -414,7 +414,6 @@ public class PathConvert extends Task {
      * @return String Updated element.
      */
 
-    //[FIXME: Compare string using equals() method instead of != operator]
     private String mapElement(String elem) {
 
         int size = prefixMap.size();
