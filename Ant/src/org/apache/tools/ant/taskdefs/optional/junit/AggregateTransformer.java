@@ -222,7 +222,6 @@ public class AggregateTransformer {
      * @throws BuildException exception if something goes wrong with the transformation.
      */
 
-    //[FIXME: No need to call String.valueOf to append to a string.]
     public void transform() throws BuildException {
         checkOptions();
         Project project = task.getProject();
@@ -239,7 +238,7 @@ public class AggregateTransformer {
         xsltTask.setIn(((XMLResultAggregator) task).getDestinationFile());
         File outputFile = null;
         if (format.equals(FRAMES)) {
-            String tempFileProperty = getClass().getName() + String.valueOf(counter++);
+            String tempFileProperty = getClass().getName() + counter++;
             File tmp = FILE_UTILS.resolveFile(project.getBaseDir(), project
                     .getProperty("java.io.tmpdir"));
             tempFileTask.setDestDir(tmp);
